@@ -6,13 +6,11 @@ const findSubset = (items, target) => {
     // remove items greater than the target
     const filteredItems = items.filter(item => item < target);
 
-    // console.log(filteredItems);
-
     for (let ii = 0; ii < filteredItems.length; ii += 1) {
         const item = filteredItems[ii];
         const subset = findSubset(filteredItems.slice(ii + 1), target - item);
 
-        if (subset) {
+        if (subset.length > 0) {
             return [item].concat(subset);
         }
     }
@@ -22,6 +20,7 @@ const findSubset = (items, target) => {
 
 const findSubsets = (items, target) => {
     // convert to numbers
+    target = parseInt(target, 10);
     items = items.map(d => parseInt(d, 10));
 
     // reverse sort
@@ -31,7 +30,7 @@ const findSubsets = (items, target) => {
     const subsets = [];
     let counter = 0;
 
-    console.log( 'finding subsets for: ', items, ` with target: ${target}` );
+    console.log( 'finding subsets for: ', items, ' with target: ', target );
 
     while (!done) {
         const subset = findSubset(items, target);
