@@ -21,6 +21,9 @@ const findSubset = (items, target) => {
 };
 
 const findSubsets = (items, target) => {
+    // convert to numbers
+    items = items.map(d => parseInt(d, 10));
+
     // reverse sort
     items.sort().reverse();
 
