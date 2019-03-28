@@ -1,0 +1,85 @@
+@import '~assets/stylus/theme/config.styl';
+@import '~assets/stylus/theme/colors.styl';
+
+.Main
+    margin: 0; padding: 0; border: none; outline: none; box-sizing border-box;
+    cursor pointer
+    padding: 0 20px; height: buttonHeight;
+    border-radius: smallBorderRadius;
+    line-height: buttonHeight; font-size: 0.95em; font-weight: 800;
+    width: 100%;
+
+    &.positive
+        &.high
+            background-color: colorPositive; color: #fff;
+            &:hover
+                background-color: lighten(colorPositive, 5%); color: #fff;
+        
+        &.medium
+            background-color: lighten(colorPositive, 75%); color: colorPositive;
+            &:hover
+                background-color:colorPositive; color: #fff;
+
+        &.low
+            background-color: transparent; color: colorPositive;
+            &:hover
+                background-color: rgba(colorPositive, 0.15); color: colorPositive;
+
+        &.nano
+            background-color: transparent; color: lighten(colorPositive, 50%);
+            &:hover
+                background-color: rgba(colorPositive, 0.05); color: lighten(colorPositive, 40%);
+
+    &.destructive
+        &.high
+            background-color: colorDestructive; color: #fff;
+            &:hover
+                background-color: lighten(colorDestructive, 5%); color: #fff;
+        
+        &.medium
+            background-color: lighten(colorDestructive, 75%); color: colorDestructive;
+            &:hover
+                background-color: colorDestructive; color: #fff;
+
+        &.low
+            background-color: transparent; color: colorDestructive;
+            &:hover
+                background-color: rgba(colorDestructive, 0.15); color: colorDestructive;
+
+    &.create
+        &.high
+            background-color: colorCreate; color: #fff;
+            &:hover
+                background-color: lighten(colorCreate, 5%); color: #fff;
+        
+        &.medium
+            background-color: lighten(colorCreate, 75%); color: colorCreate;
+            &:hover
+                background-color:colorCreate; color: #fff;
+
+        &.low
+            background-color: transparent; color: colorCreate;
+            &:hover
+                background-color: rgba(colorCreate, 0.2); color: colorCreate;
+    
+    // disabled states
+    &.disabled
+        &.high
+            background-color: #ddd; color: #666;
+            &:hover
+                background-color: #ddd; color: #666;
+        
+        &.medium
+            background-color: #f5f5f5; color: #888;
+            &:hover
+                background-color: #f5f5f5; color: #888;
+
+        &.low
+            color: #888;
+            $:hover
+                color: #888;
+
+        &.nano
+            color: #eee;
+            $:hover
+                color: #eee;

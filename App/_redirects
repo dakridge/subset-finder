@@ -1,0 +1,9 @@
+http://app.simpledip.com /app.html 200
+https://app.simpledip.com /app.html 200
+http://app.simpledip.com/* /app.html 200
+https://app.simpledip.com/* /app.html 200
+
+http://dev-simpledip.netlify.com/ /app.html 200
+https://dev-simpledip.netlify.com/ /app.html 200
+
+/*    /index.html   200
