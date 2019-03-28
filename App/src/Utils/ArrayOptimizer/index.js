@@ -28,6 +28,8 @@ const findSubsets = (items, target) => {
     const subsets = [];
     let counter = 0;
 
+    console.log( 'finding subsets for: ', items, ` with target: ${target}` );
+
     while (!done) {
         const subset = findSubset(items, target);
 
@@ -49,6 +51,7 @@ const findSubsets = (items, target) => {
         }
     }
 
+    console.log( 'Found Subsets:', subsets );
     return subsets;
 };
 
