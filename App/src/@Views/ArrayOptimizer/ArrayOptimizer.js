@@ -12,8 +12,8 @@ import findSubsets from 'Utils/ArrayOptimizer';
 import css from './ArrayOptimizer.styl';
 
 const SubsetFinder = () => {
-    const [target, setTarget] = useState('40');
-    const [array, setArray] = useState('1,2,3');
+    const [target, setTarget] = useState('6');
+    const [array, setArray] = useState('3,3,4,2,5,1,6');
     const [calculatedValue, setCalculatedValue] = useState(null);
 
     const calculate = () => {
